@@ -1,28 +1,11 @@
 <mvc:View controllerName="restinpeace.project1.controller.First"
   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-  xmlns="sap.m"> <!-- Added namespace for "sap.m" -->
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"> <!-- Added namespace for "sap.ui.layout" -->
 
   <Page id="page" title="I am first View." class="myBackgroundImage">
-    <content>
-      <FlexBox justifyContent="Center" alignItems="Center" height="100%">
-        <!-- Your content here -->
-        <VBox>
-          <Label text="Login" design="Bold"></Label>
-          <Label text="Username" design="Bold" class="sapUiMediumMarginTop myTextColor myTextFont"></Label>
-          <Input width="400px" placeholder="Enter your Username"></Input>
-          <Label text="Password" design="Bold" class="myTextColor myTextFont"></Label>
-          <Input width="400px" type="Password" placeholder="Enter your Password"></Input>
-          <Button text="Login" type="Emphasized" width="400px"></Button>
-        </VBox>
-      </FlexBox>
-    </content>
-    
-    <footer>
-      <Bar>
-        <contentMiddle>
-          <Button text="Go to Second View" press="onGoSecond" type="Emphasized" />
-        </contentMiddle>
-      </Bar>
-    </footer>
+          
+    <f:SimpleForm title="Employee Information" layout="ResponsiveGridLayout">
+    </f:SimpleForm>
   </Page>
 </mvc:View>
