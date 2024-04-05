@@ -1,11 +1,26 @@
 <mvc:View controllerName="restinpeace.project1.controller.First"
   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
   xmlns="sap.m"
-  xmlns:l="sap.ui.layout"> <!-- Added namespace for "sap.ui.layout" -->
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"> <!-- Added namespace for "sap.ui.layout.form" -->
 
   <Page id="page" title="I am first View." class="myBackgroundImage">
           
     <f:SimpleForm title="Employee Information" layout="ResponsiveGridLayout">
+        <f:content>
+            <Label text="Employee Id"/>
+            <Input/>
+            <Label text="Employee Name"/>
+            <Input/>
+            <Label text="Employee Designation"/>
+            <Input/>
+            <Label text="Employee Skill"/>
+            <Input/>
+            <Label text="Employee Email"/>
+            <Input/>
+            <Label text="Employee Phone"/>
+            <Input/>
+        </f:content>
     </f:SimpleForm>
   </Page>
 </mvc:View>
