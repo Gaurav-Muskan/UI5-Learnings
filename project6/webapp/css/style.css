@@ -1,0 +1,15 @@
+/* Enter your custom styles here */
+.myTextColor{
+    color: blue;
+}
+.myTextFont{
+    font-size: 20px;
+    font-style: italic;
+}
+/* .myBackgroundColor{
+    background-color: aquamarine;
+} */
+.myBackgroundImage{
+    background-image:url('../images/backGroundImage.jpg') ;
+    background-size: cover !important;
+}

@@ -1,0 +1,20 @@
+<mvc:View controllerName="restinpeace.project1.controller.Second"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="" title="{i18n>title}">
+    <customHeader>
+        <Bar>
+            <contentMiddle>
+                <Title text="I am Second View" />
+            </contentMiddle>
+        </Bar>
+    </customHeader>
+        <footer>
+      <Bar>
+        <contentMiddle>
+          <Button text="Go to Third View" press="onGoThird" type="Emphasized" />
+        </contentMiddle>
+      </Bar>
+    </footer>
+    </Page>
+</mvc:View>
