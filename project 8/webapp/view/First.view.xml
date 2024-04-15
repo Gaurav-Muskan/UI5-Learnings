@@ -1,15 +1,31 @@
 <mvc:View controllerName="restinpeace.project1.controller.First"
   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-  xmlns="sap.m">
-  <Page id="page" >
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form">
+  <Page id="page">
     <content>
-    <Text text="I am First View." class="sapMH1FontSize">
-    </Text>
+      <Text text="I am First View." class="sapMH1FontSize" />
+      <f:SimpleForm title="Employee Information" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="2" emptySpanL="4" emptySpanM="4">
+        <f:content>
+          <Label text="Employee Id" required="true"/>
+          <Input id="idIpEmpId" />
+          <Label text="Employee Name" required="true"/>
+          <Input id="idIpEmpName" />
+          <Label text="Employee Designation" required="true"/>
+          <Input id="idIpEmpDesignation" />
+          <Label text="Employee Skill" required="true"/>
+          <Input id="idIpEmpSkill" />
+          <Label text="Employee Email" required="true"/>
+          <Input id="idIpEmpEmail" />
+          <Label text="Employee Phone" required="true"/>
+          <Input id="idIpEmpPhone" />
+        </f:content>
+      </f:SimpleForm>
     </content>
     <footer>
       <Bar>
         <contentMiddle>
-          <Button text="Go to Second View" press="onGoSecond" type="Emphasized" />
+          <Button id="idBtnSub" text="Submit" press="onSubmit" type="Emphasized" />
         </contentMiddle>
       </Bar>
     </footer>
