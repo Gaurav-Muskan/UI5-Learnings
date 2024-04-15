@@ -1,15 +1,48 @@
 <mvc:View controllerName="restinpeace.project1.controller.First"
   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
   xmlns="sap.m">
-  <Page id="page" >
+  <Page id="page">
     <content>
-    <Text text="I am First View." class="sapMH1FontSize">
-    </Text>
-    </content>
-    <footer>
-      <Bar>
+            <ObjectHeader title="Washing Machine" number="30000" numberUnit="INR" backgroundDesign="Solid">
+                <attributes>
+                    <sap.m:ObjectAttribute title="Material Id" text="MAT003"></sap.m:ObjectAttribute>
+                    <sap.m:ObjectAttribute title="Material Description" text="fully Automated"></sap.m:ObjectAttribute>
+                </attributes>
+                <statuses>
+                    <sap.m:ObjectStatus text="Approved"></sap.m:ObjectStatus>
+                </statuses>
+            </ObjectHeader>
+            <sap.m:IconTabBar>
+                <items>
+                    <sap.m:IconTabFilter icon="sap-icon://hint">
+                    <f:SimpleForm title="Employee Information" editable="false" layout="ResponsiveGridLayout" labelSpanL="2" labelSpanM="2" emptySpanL="4" emptySpanM="4">
+                <!-- This layout is known as 3:5:4 simple layout -->
+                <f:content>
+                    <Label text="Employee Id"/>
+                    <Input/>
+                    <Label text="Employee Name"/>
+                    <Input/>
+                    <Label text="Employee Designation"/>
+                    <Input/>
+                    <core:Title text="Additional Information"/>
+                    <Label text="Employee Skill"/>
+                    <Input/>
+                    <Label text="Employee Email"/>
+                    <Input/>
+                    <Label text="Employee Phone"/>
+                    <Input/>
+                </f:content>
+            </f:SimpleForm>
+                    </sap.m:IconTabFilter>
+                    <sap.m:IconTabFilter icon="sap-icon://notes"></sap.m:IconTabFilter>
+                </items>
+            </sap.m:IconTabBar>
+        </content>
+
+        <footer>
+      <Bar id="_IDGenBar1">
         <contentMiddle>
-          <Button text="Go to Second View" press="onGoSecond" type="Emphasized" />
+          <Button id="_IDGenButton1" text="Go to Second View" press="onGoSecond" type="Emphasized" />
         </contentMiddle>
       </Bar>
     </footer>
