@@ -10,9 +10,9 @@
           <Label text="Employee Id" required="true"/>
           <Input id="idIpEmpId" />
           <Label text="Employee Name" required="true"/>
-          <Input id="idIpEmpName" />
+          <Input id="idIpEmpName" maxLength="20"/>
           <Label text="Employee Designation" required="true"/>
-          <Input id="idIpEmpDesignation" />
+          <Input id="idIpEmpDesig" />
           <Label text="Employee Skill" required="true"/>
           <Input id="idIpEmpSkill" />
           <Label text="Employee Email" required="true"/>
