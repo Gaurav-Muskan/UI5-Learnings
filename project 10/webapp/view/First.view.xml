@@ -2,17 +2,16 @@
   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
   xmlns="sap.m">
   <Page id="page" >
-    <Button
-        id="btn1"
-				text="Steady"
-				press="onPress"
-				type="Emphasized"
-				class="sapUiSmallMargin"/>
-        <Button
-        id="btn2"
-				text="Go to 2nd"
-				press="onGoSecond"
-				type="Emphasized"
-				class="sapUiSmallMargin"/>
+    <content>
+    <Text text="I am First View." class="sapMH1FontSize">
+    </Text>
+    </content>
+    <footer>
+      <Bar>
+        <contentMiddle>
+          <Button text="Go to Second View" press="onGoSecond" type="Emphasized" />
+        </contentMiddle>
+      </Bar>
+    </footer>
   </Page>
 </mvc:View>

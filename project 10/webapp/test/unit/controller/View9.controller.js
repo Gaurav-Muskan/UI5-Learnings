@@ -1,13 +1,13 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"project1/controller/View1.controller"
+	"restinpeace/project1/controller/View9.controller"
 ], function (Controller) {
 	"use strict";
 
-	QUnit.module("View1 Controller");
+	QUnit.module("View9 Controller");
 
-	QUnit.test("I should test the View1 controller", function (assert) {
+	QUnit.test("I should test the View9 controller", function (assert) {
 		var oAppController = new Controller();
 		oAppController.onInit();
 		assert.ok(oAppController);

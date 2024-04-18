@@ -40,7 +40,7 @@ sap.ui.define([
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "App Title",
-									"targetURL": "#project1-display"
+									"targetURL": "#restinpeaceproject1-display"
 								}
 							}]
 						}]
@@ -51,8 +51,8 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"project1-display": {
-								"semanticObject": "project1",
+							"restinpeaceproject1-display": {
+								"semanticObject": "restinpeaceproject1",
 								"action": "display",
 								"description": "An SAP Fiori application.",
 								"title": "App Title",
@@ -61,8 +61,8 @@ sap.ui.define([
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=project1",
-									"url": sap.ui.require.toUrl("project1")
+									"additionalInformation": "SAPUI5.Component=restinpeace.project1",
+									"url": sap.ui.require.toUrl("restinpeace/project1")
 								}
 							}
 						}
