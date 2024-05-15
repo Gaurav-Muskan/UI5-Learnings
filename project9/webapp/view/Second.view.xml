@@ -1,20 +1,26 @@
 <mvc:View controllerName="restinpeace.project1.controller.Second"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
     <Page id="" title="{i18n>title}">
-    <customHeader>
-        <Bar>
-            <contentMiddle>
-                <Title text="I am Second View" />
-            </contentMiddle>
-        </Bar>
-    </customHeader>
-        <footer>
-      <Bar>
-        <contentMiddle>
-          <Button text="Go to Third View" press="onGoThird" type="Emphasized" />
-        </contentMiddle>
-      </Bar>
-    </footer>
+    <content>
+      <Text text="I am First View." class="sapMH1FontSize" />
+      <f:SimpleForm title="Employee Information" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="2" emptySpanL="4" emptySpanM="4">
+        <f:content>
+          <Label text="Employee Id" required="true"/>
+          <Text id="idTxtEmpId" />
+          <Label text="Employee Name" required="true"/>
+          <Text id="idTxtEmpName" />
+          <Label text="Employee Designation" required="true"/>
+          <Text id="idTxtEmpDesignation" />
+          <Label text="Employee Skill" required="true"/>
+          <Text id="idTxtEmpSkill" />
+          <Label text="Employee Email" required="true"/>
+          <Text id="idTxtEmpEmail" />
+          <Label text="Employee Phone" required="true"/>
+          <Text id="idTxtEmpPhone" />
+        </f:content>
+      </f:SimpleForm>
+    </content>
     </Page>
 </mvc:View>
