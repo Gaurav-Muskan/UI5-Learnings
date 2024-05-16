@@ -25,7 +25,7 @@
     <footer>
       <Bar>
         <contentMiddle>
-          <Button id="idBtnSub" text="Submit" press="onSubmit" type="Emphasized" />
+          <Button id="idBtnSub" text="Submit" press="onGoSecond" type="Emphasized" />
         </contentMiddle>
       </Bar>
     </footer>

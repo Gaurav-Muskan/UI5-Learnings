@@ -1,14 +1,9 @@
-/**
- * eslint-disable @sap/ui5-jsdocs/no-jsdoc
- */
-
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/Device",
-    "restinpeace/project1/model/models"
-    "sap/ui/json/JSONModel"
-],
-function (UIComponent, Device, models,JSONModel) {
+    "restinpeace/project1/model/models",
+    "sap/ui/model/json/JSONModel"
+], function (UIComponent, Device, models, JSONModel) {
     "use strict";
 
     return UIComponent.extend("restinpeace.project1.Component", {
@@ -24,16 +19,17 @@ function (UIComponent, Device, models,JSONModel) {
         init: function () {
             // call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
-            var oModel=new JSONModel({
-                empid="";
-                empname="";
-                empdesig="";
-                empskill="";
-                empemail="";
-                empphone ="";
 
-            }); //This creates json file(Rectangular Box)
+            var oModel = new JSONModel({
+                empid: "",
+                empname: "",
+                empdesig: "",
+                empskill: "",
+                empemail: "",
+                empphone: ""
+            }); // This creates a JSON model with the given data
             this.setModel(oModel);
+
             // enable routing
             this.getRouter().initialize();
 
@@ -41,5 +37,4 @@ function (UIComponent, Device, models,JSONModel) {
             this.setModel(models.createDeviceModel(), "device");
         }
     });
-}
-);
+});
