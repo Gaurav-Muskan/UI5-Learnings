@@ -20,15 +20,6 @@ sap.ui.define([
             // call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
 
-            var oModel = new JSONModel({
-                empid: "",
-                empname: "",
-                empdesig: "",
-                empskill: "",
-                empemail: "",
-                empphone: ""
-            }); // This creates a JSON model with the given data
-            this.setModel(oModel);
 
             // enable routing
             this.getRouter().initialize();

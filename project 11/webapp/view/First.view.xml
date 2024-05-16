@@ -8,24 +8,24 @@
       <f:SimpleForm title="Employee Information" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="2" emptySpanL="4" emptySpanM="4">
         <f:content>
           <Label text="Employee Id" required="true"/>
-          <Input id="idIpEmpId" />
+          <Input id="idIpEmpId" value="{EmpDetails>/empid}"/>
           <Label text="Employee Name" required="true"/>
-          <Input id="idIpEmpName" />
+          <Input id="idIpEmpName" value="{EmpDetails>/empname}"/>
           <Label text="Employee Designation" required="true"/>
-          <Input id="idIpEmpDesig" />
+          <Input id="idIpEmpDesig" value="{EmpDetails>/empdesignation}"/>
           <Label text="Employee Skill" required="true"/>
-          <Input id="idIpEmpSkill" />
+          <Input id="idIpEmpSkill" value="{EmpDetails>/empskill}"/>
           <Label text="Employee Email" required="true"/>
-          <Input id="idIpEmpEmail" />
+          <Input id="idIpEmpEmail" value="{EmpDetails>/empemail}"/>
           <Label text="Employee Phone" required="true"/>
-          <Input id="idIpEmpPhone" />
+          <Input id="idIpEmpPhone" value="{EmpDetails>/empphone}"/>
         </f:content>
       </f:SimpleForm>
     </content>
     <footer>
       <Bar>
         <contentMiddle>
-          <Button id="idBtnSub" text="Submit" press="onSubmit " type="Emphasized" />
+          <Button id="idBtnSub" text="Submit" press="onSubmit" type="Emphasized" />
         </contentMiddle>
       </Bar>
     </footer>
