@@ -11,7 +11,7 @@ sap.ui.define([
         },
         onGoSecond: function() {
             this.getOwnerComponent().getRouter().navTo("Second");
-        },
+        }, 
         onSubmit: function() {
             var empId = this.getView().byId("idIpEmpId").getValue();
             var empName = this.getView().byId("idIpEmpName").getValue();
@@ -19,9 +19,19 @@ sap.ui.define([
             var empSkill = this.getView().byId("idIpEmpSkill").getValue();
             var empEmail = this.getView().byId("idIpEmpEmail").getValue();
             var empPhone = this.getView().byId("idIpEmpPhone").getValue();
-        
+            
+            var oModel = this.getOwnerComponent().getModel();
+            oModel.setProperty("/empid", empId);
+            oModel.setProperty("/empname", empName);
+            oModel.setProperty("/empdesig", empDesig);
+            oModel.setProperty("/empskill", empSkill);
+            oModel.setProperty("/empemail", empEmail);
+            oModel.setProperty("/empphone", empPhone);
+            
+            this.getOwnerComponent().getRouter().navTo("Second");
             // Further processing of the collected data
         }
+        
         
         // onSubmit: function() {
         //     var empId = this.getView().byId("idIpEmpId").getValue();
