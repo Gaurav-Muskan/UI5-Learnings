@@ -62,7 +62,7 @@
         "type": "sap.ui.model.json.JSONModel",
         "uri": "localData/EmpDetails.json",
         "settings": {
-          "defaultBindingMode": "TwoWay"
+          "defaultBindingMode": "OneWay"
         }
       }
     },

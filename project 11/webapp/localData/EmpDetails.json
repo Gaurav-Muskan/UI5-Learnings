@@ -1,6 +1,6 @@
 {
-    "EmpDetials": {
-        "empid": "",
+    "empDetails": {
+        "empid": "456",
         "empname": "",
         "empdesignation": "",
         "empskill": "",
