@@ -1,0 +1,10 @@
+{
+    "empDetails": {
+        "empid": "",
+        "empname": "",
+        "empdesignation": "",
+        "empskill": "",
+        "empemail": "",
+        "empphone": ""
+    }
+}
