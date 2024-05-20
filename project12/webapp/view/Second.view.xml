@@ -13,27 +13,27 @@
             <VBox>
                 <HBox>
                     <Label text="Employee Id" required="true" width="150px"/>
-                    <Text id="idIpEmpId" text="{EmpDetails>/empDetails/empid}" />
+                    <Text id="idIpEmpId" text="{myModel>/empid}" />
                 </HBox>
                 <HBox>
                     <Label text="Employee Name" required="true" width="150px"/>
-                    <Text id="idIpEmpName" text="{EmpDetails>/empDetails/empname}" />
+                    <Text id="idIpEmpName" text="{myModel>/empname}" />
                 </HBox>
                 <HBox>
                     <Label text="Employee Designation" required="true" width="150px"/>
-                    <Text id="idIpEmpDesignation" text="{EmpDetails>/empDetails/empdesignation}" />
+                    <Text id="idIpEmpDesignation" text="{myModel>/empdesignation}" />
                 </HBox>
                 <HBox>
                     <Label text="Employee Skill" required="true" width="150px"/>
-                    <Text id="idIpEmpSkill" text="{EmpDetails>/empDetails/empskill}" />
+                    <Text id="idIpEmpSkill" text="{myModel>/empskill}" />
                 </HBox>
                 <HBox>
                     <Label text="Employee Email" required="true" width="150px"/>
-                    <Text id="idIpEmpEmail" text="{EmpDetails>/empDetails/empemail}" />
+                    <Text id="idIpEmpEmail" text="{myModel>/empemail}" />
                 </HBox>
                 <HBox>
                     <Label text="Employee Phone" required="true" width="150px"/>
-                    <Text id="idIpEmpPhone" text="{EmpDetails>/empDetails/empphone}" />
+                    <Text id="idIpEmpPhone" text="{myModel>/empphone}" />
                 </HBox>
             </VBox>
         </content>

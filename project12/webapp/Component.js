@@ -20,8 +20,9 @@ sap.ui.define([
             // call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
 
-            var oModel=new JSONModel("models/data.json");
-            this.setModel(oModel);
+            var oModel=new JSONModel("model/data.json");
+
+            this.setModel(oModel, "myModel");//Here we set local model global.
             // enable routing
             this.getRouter().initialize();
 
