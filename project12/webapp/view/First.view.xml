@@ -8,17 +8,17 @@
       <f:SimpleForm title="Employee Information" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="2" emptySpanL="4" emptySpanM="4">
         <f:content>
           <Label text="Employee Id" required="true"/>
-          <Input id="idIpEmpId" value="{EmpDetails>/empDetails/empid}"/>
+          <Input id="idIpEmpId" value="{myModel>/empid}"/>
           <Label text="Employee Name" required="true"/>
-          <Input id="idIpEmpName" value="{EmpDetails>/empDetails/empname}"/>
+          <Input id="idIpEmpName" value="{myModel>/empname}"/>
           <Label text="Employee Designation" required="true"/>
-          <Input id="idIpEmpDesig" value="{EmpDetails>/empDetails/empdesignation}"/>
+          <Input id="idIpEmpDesig" value="{myModel>/empdesignation}"/>
           <Label text="Employee Skill" required="true"/>
-          <Input id="idIpEmpSkill" value="{EmpDetails>/empDetails/empskill}"/>
+          <Input id="idIpEmpSkill" value="{myModel>/empskill}"/>
           <Label text="Employee Email" required="true"/>
-          <Input id="idIpEmpEmail" value="{EmpDetails>/empDetails/empemail}"/>
+          <Input id="idIpEmpEmail" value="{myModel>/empemail}"/>
           <Label text="Employee Phone" required="true"/>
-          <Input id="idIpEmpPhone" value="{EmpDetails>/empDetails/empphone}"/>
+          <Input id="idIpEmpPhone" value="{myModel>/empphone}"/>
         </f:content>
       </f:SimpleForm>
     </content>

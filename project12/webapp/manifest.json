@@ -57,15 +57,8 @@
         "settings": {
           "bundleName": "restinpeace.project1.i18n.i18n"
         }
-      },
-      "EmpDetails": {
-        "type": "sap.ui.model.json.JSONModel",
-        "uri": "localData/EmpDetails.json",
-        "settings": {
-          "defaultBindingMode": "OneWay"
-        }
       }
-    },
+        },
     "resources": {
       "css": [
         {
