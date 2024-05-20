@@ -13,7 +13,7 @@
             <VBox>
                 <HBox>
                     <Label text="Employee Id" required="true" width="150px"/>
-                    <Input id="idIpEmpId" value="{EmpDetails>/empDetails/empid}" />
+                    <Text id="idIpEmpId" text="{EmpDetails>/empDetails/empid}" />
                 </HBox>
                 <HBox>
                     <Label text="Employee Name" required="true" width="150px"/>
