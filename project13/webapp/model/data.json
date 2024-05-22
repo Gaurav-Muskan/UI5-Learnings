@@ -1,0 +1,46 @@
+{
+    "empid": "",
+    "empname": "",
+    "empdesignation": "",
+    "empskill": "",
+    "empemail": "",
+    "empphone": "",
+    "aRelations": [
+        {
+            "relation": "Mother"
+        },
+        {
+            "relation": "Father"
+        },
+        {
+            "relation": "Brother"
+        },
+        {
+            "relation": "Sister"
+        },
+        {
+            "relation": "Uncle"
+        },
+        {
+            "relation": "Aunt"
+        }
+    ],
+    "aLanguage": [{
+        "language":"Hindi"
+}, {
+    "language":"English"
+}, {
+    "language":"Telugu"
+}, {
+    "language":"Bengali"
+}, {
+    "language":"Malayalam"
+}
+],
+"aGender": [{
+    "gender":"Male"
+},{
+"gender":"Female"
+}],
+
+}
