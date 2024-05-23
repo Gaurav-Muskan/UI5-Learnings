@@ -8,7 +8,27 @@
 >
     <Page id="page">
         <content>
-            <f:SimpleForm
+            <List
+                items="{myModel>/aEmployees}"
+                headerText="Employees"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
+            >
+                <ObjectListItem
+                    title="{myModel>empname}"
+                    number="{myModel>empid}"
+                    numberUnit="{myModel>empdesig}"
+                >
+                <attributes>
+                <ObjectAttribute title="Skill" text="{myModel>empskill}"></ObjectAttribute>
+                <ObjectAttribute title="Email" text="{myModel>empemail}"></ObjectAttribute>
+                </attributes>
+                <firstStatus>
+                <ObjectStatus text="{myModel>emploc}"></ObjectStatus>
+                </firstStatus>
+                </ObjectListItem>
+            </List>
+            <!-- <f:SimpleForm
                 title="Employee Information"
                 layout="ResponsiveGridLayout"
                 labelSpanL="4"
@@ -36,7 +56,7 @@
                     </RadioButtonGroup>
                     <Label text="Are you married?"></Label>
                     <CheckBox select="onSelChb"></CheckBox>
-                    <!-- <Select
+                    <Select
                         id="deptId"
                         required="true"
                     >
@@ -52,9 +72,9 @@
                             key="3"
                             text="Marketing"
                         />
-                    </Select> -->
+                    </Select>
                 </f:content>
-            </f:SimpleForm>
+            </f:SimpleForm> -->
         </content>
         <footer>
             <Bar>
