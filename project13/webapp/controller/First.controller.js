@@ -28,8 +28,11 @@ sap.ui.define([
             this.getOwnerComponent().getRouter().navTo("Second");
             // Further processing of the collected data
         },
-        // onSelRelation: function(oEvent){
-        //     var selRel=oEvent.getParameter("selectedItem").getText();
+        onSelEmp:function(oEvent){
+            var empId=oEvent.getParameter("listItem").getBindingContext("myModel").getProperty("empid");
+            console.log(empId);
+        }
+         //     var selRel=oEvent.getParameter("selectedItem").getText();
         //     console.log(selRel);
         // },
         // onSelRelCB: function(oEvent){

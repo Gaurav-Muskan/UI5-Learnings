@@ -9,8 +9,10 @@
     <Page id="page">
         <content>
             <List
-                items="{mymodel>/aEmployees}"
+                items="{myModel>/aEmployees}"
                 headerText="Employees"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
             >
                 <ObjectListItem
                     title="{myModel>empname}"
