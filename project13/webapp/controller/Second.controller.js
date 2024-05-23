@@ -13,6 +13,9 @@ sap.ui.define(
           .getRoute("Second")
           .attachPatternMatched(this.onPatternMatched, this);
       },
+      onPatternMatched:function(){
+        this.getView().bindElement("myModel>/aEmployees/2");
+      },
       onGoThird: function () {
         this.getOwnerComponent().getRouter().navTo("Third");
       },

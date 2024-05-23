@@ -25,13 +25,15 @@ sap.ui.define([
             // oModel.setProperty("/empemail", empEmail);
             // oModel.setProperty("/empphone", empPhone);
             
-            this.getOwnerComponent().getRouter().navTo("Second");
+            
             // Further processing of the collected data
         },
         onSelEmp:function(oEvent){
             var sPath=oEvent.getParameter("listItem").getBindingContext("myModel").getPath("");
-            alert(sPath);
+            this.getOwnerComponent().getRouter().navTo("Second");
+            // alert(sPath);
         }
+        // fnShowDetails()
          //     var selRel=oEvent.getParameter("selectedItem").getText();
         //     console.log(selRel);
         // },
