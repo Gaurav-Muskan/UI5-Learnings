@@ -29,8 +29,8 @@ sap.ui.define([
             // Further processing of the collected data
         },
         onSelEmp:function(oEvent){
-            var empId=oEvent.getParameter("listItem").getBindingContext("myModel").getProperty("empid");
-            console.log(empId);
+            var sPath=oEvent.getParameter("listItem").getBindingContext("myModel").getPath("");
+            alert(sPath);
         }
          //     var selRel=oEvent.getParameter("selectedItem").getText();
         //     console.log(selRel);
