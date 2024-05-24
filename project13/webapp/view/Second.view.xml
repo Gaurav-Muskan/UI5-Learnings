@@ -34,7 +34,7 @@
                 </HBox>
                 <HBox>
                     <Label text="Employee Location" required="true" width="150px"/>
-                    <Text id="idIpEmpLocation" text="{myModel>loc}" />
+                    <Text id="idIpEmpLocation" text="{myModel>emploc}" />
                 </HBox>
             </VBox>
         </content>

@@ -90,7 +90,7 @@
         },
         {
           "name": "Second",
-          "pattern": "Second",
+          "pattern": "Second/{Index}",
           "target": [
             "TargetSecond"
           ]
