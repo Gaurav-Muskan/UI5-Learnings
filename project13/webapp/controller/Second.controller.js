@@ -13,9 +13,12 @@ sap.ui.define(
           .getRoute("Second")
           .attachPatternMatched(this.onPatternMatched, this);
       },
+      
       onPatternMatched:function(oEvent){
+        var myModel=this.getOwnerComponent().getModel("myModel");
         var index=oEvent.getParameter("arguments").Index;
-        this.getView().bindElement("myModel>/aEmployees/"+index);
+        var newIndex = myModel.getProperty("/index");
+        this.getView().bindElement("myModel>/aEmployees/"+newIndex);
       },
       onGoThird: function () {
         this.getOwnerComponent().getRouter().navTo("Third");

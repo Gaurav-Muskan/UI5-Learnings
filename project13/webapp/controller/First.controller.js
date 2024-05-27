@@ -36,6 +36,8 @@ sap.ui.define(
         // Split the string by '/' and get the last element
         const index = inputString.split("/")[2];
         // console.log(index);
+        var myModel=this.getOwnerComponent().getModel("myModel");
+        myModel.setProperty("/index", index)
         this.getOwnerComponent().getRouter().navTo("Second",{
             Index:index
         });
