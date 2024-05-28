@@ -3,8 +3,11 @@ sap.ui.define(
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
     "sap/ui/model/json/JSONModel",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
+    "sap/ui/model/Sorter",
   ],
-  function (Controller, MessageToast, JSONModel) {
+  function (Controller, MessageToast, JSONModel,Filter,FilterOperator,Sorter) {
     "use strict";
 
     return Controller.extend("restinpeace.project1.controller.First", {
@@ -43,6 +46,17 @@ sap.ui.define(
         });
         // alert(sPath);
       },
+      onSearchEmp: function(oEvent) {
+        var value = oEvent.getParameter("newValue");
+        var aFilters = [];
+        if (value !== "") {
+          // Use the correct path without curly braces
+          var oFilter = new sap.ui.model.Filter("empname", sap.ui.model.FilterOperator.Contains, value);
+          aFilters.push(oFilter);
+        }
+        // Apply the filter to the binding
+        this.getView().byId("idListEmp").getBinding("items").filter(aFilters);
+      },      
       // fnShowDetails()
       //     var selRel=oEvent.getParameter("selectedItem").getText();
       //     console.log(selRel);
