@@ -57,6 +57,14 @@ sap.ui.define(
         // Apply the filter to the binding
         this.getView().byId("idListEmp").getBinding("items").filter(aFilters);
       },      
+      onSortAscending:function(){
+        var oSorter=new Sorter("empname",false);
+        this.getView().byId("idListEmp").getBinding("items").sort(oSorter);
+      },
+      onSortDescending:function(){
+        var oSorter=new Sorter("empname",true);
+        this.getView().byId("idListEmp").getBinding("items").sort(oSorter);
+      },
       // fnShowDetails()
       //     var selRel=oEvent.getParameter("selectedItem").getText();
       //     console.log(selRel);
