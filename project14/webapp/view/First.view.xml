@@ -10,22 +10,47 @@
         <content>
             <List
                 items="{myModel>/aEmployees}"
-                headerText="Employees"
                 mode="SingleSelectMaster"
                 selectionChange="onSelEmp"
             >
+                <headerToolbar>
+                    <Toolbar>
+                        <Text
+                            text="Employees Details"
+                            class="sapMH4FontSize"
+                        />
+                        <ToolbarSpacer />
+                        <SearchField width="30%" />
+                        <Button
+                            icon="sap-icon://sort-ascending"
+                            tooltip="Sort Ascending"
+                            press="onSortAscending"
+                        />
+                        <Button
+                            icon="sap-icon://sort-descending"
+                            tooltip="Sort Descending"
+                            press="onSortDescending"
+                        />
+                    </Toolbar>
+                </headerToolbar>
                 <ObjectListItem
                     title="{myModel>empname}"
                     number="{myModel>empid}"
                     numberUnit="{myModel>empdesig}"
                 >
-                <attributes>
-                <ObjectAttribute title="Skill" text="{myModel>empskill}"></ObjectAttribute>
-                <ObjectAttribute title="Email" text="{myModel>empemail}"></ObjectAttribute>
-                </attributes>
-                <firstStatus>
-                <ObjectStatus text="{myModel>emploc}"></ObjectStatus>
-                </firstStatus>
+                    <attributes>
+                        <ObjectAttribute
+                            title="Skill"
+                            text="{myModel>empskill}"
+                        />
+                        <ObjectAttribute
+                            title="Email"
+                            text="{myModel>empemail}"
+                        />
+                    </attributes>
+                    <firstStatus>
+                        <ObjectStatus text="{myModel>emploc}" />
+                    </firstStatus>
                 </ObjectListItem>
             </List>
             <!-- <f:SimpleForm
