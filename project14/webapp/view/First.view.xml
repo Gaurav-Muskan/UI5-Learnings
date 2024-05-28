@@ -9,6 +9,7 @@
     <Page id="page">
         <content>
             <List
+                id="idListEmp"
                 items="{myModel>/aEmployees}"
                 mode="SingleSelectMaster"
                 selectionChange="onSelEmp"
@@ -20,7 +21,7 @@
                             class="sapMH4FontSize"
                         />
                         <ToolbarSpacer />
-                        <SearchField width="30%" />
+                        <SearchField width="30%" liveChange="onSearchEmp"/>
                         <Button
                             icon="sap-icon://sort-ascending"
                             tooltip="Sort Ascending"
