@@ -1,0 +1,143 @@
+<mvc:View
+    controllerName="restinpeace.project1.controller.First"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+>
+    <Page id="page">
+        <content>
+            <!-- <List
+                id="idListEmp"
+                items="{myModel>/aEmployees}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
+            >
+                <ObjectListItem
+                    title="{myModel>empname}"
+                    number="{myModel>empid}"
+                    numberUnit="{myModel>empdesig}"
+                >
+                    <attributes>
+                        <ObjectAttribute
+                            title="Skill"
+                            text="{myModel>empskill}"
+                        />
+                        <ObjectAttribute
+                            title="Email"
+                            text="{myModel>empemail}"
+                        />
+                    </attributes>
+                    <firstStatus>
+                        <ObjectStatus text="{myModel>emploc}" />
+                    </firstStatus>
+                </ObjectListItem>
+            </List> -->
+            <Table
+                id="idListEmp"
+                items="{myModel>/aEmployees}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
+            >
+                <headerToolbar>
+                    <Toolbar>
+                        <Text text="Employees Details" class="sapMH4FontSize" />
+                        <ToolbarSpacer />
+                        <SearchField width="30%" liveChange="onSearchEmp" />
+                        <Button icon="sap-icon://sort-ascending" tooltip="Sort Ascending" press="onSortAscending" />
+                        <Button icon="sap-icon://sort-descending" tooltip="Sort Descending" press="onSortDescending" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Employee ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Designation" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Skill" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Location" />
+                    </Column>
+                </columns>
+                <items>
+                    <!-- Used ColumnListItem to wrap the cells -->
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{myModel>empid}" />
+                            <Text text="{myModel>empname}" />
+                            <Text text="{myModel>empdesig}" />
+                            <Text text="{myModel>empskill}" />
+                            <Text text="{myModel>emploc}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <!-- <f:SimpleForm
+                title="Employee Information"
+                layout="ResponsiveGridLayout"
+                labelSpanL="4"
+                labelSpanM="2"
+                emptySpanL="4"
+                emptySpanM="4"
+            >
+                <f:content>
+                    <Label text="Select the Relationship" />
+                    <Select items="{myModel>/aRelations}" change="onSelRelation">
+                        <core:ListItem text="{myModel>relation}" />
+                    </Select>
+                    <Label text="Select the Relationship in ComboBox"> </Label>
+                    <ComboBox items="{myModel>/aRelations}" selectionChange="onSelRelCB">
+                        <core:ListItem text="{myModel>relation}" />
+                    </ComboBox>
+                    <Label text="Select the language you know"> </Label>
+                    <MultiComboBox items="{myModel>/aLanguage}" selectionFinish="onSelLangs" >
+                        <core:ListItem text="{myModel>language}" />
+                    </MultiComboBox>
+                    <Label text="Select your gender"></Label>
+                    <RadioButtonGroup buttons="{myModel>/aGender}" columns="2" select="onSelectGender">
+                    <RadioButton text="{myModel>gender}">
+                    </RadioButton>
+                    </RadioButtonGroup>
+                    <Label text="Are you married?"></Label>
+                    <CheckBox select="onSelChb"></CheckBox>
+                    <Select
+                        id="deptId"
+                        required="true"
+                    >
+                        <core:Item
+                            key="1"
+                            text="Agri"
+                        />
+                        <core:Item
+                            key="2"
+                            text="Trade"
+                        />
+                        <core:Item
+                            key="3"
+                            text="Marketing"
+                        />
+                    </Select>
+                </f:content>
+            </f:SimpleForm> -->
+        </content>
+        <footer>
+            <Bar>
+                <contentMiddle>
+                    <Button
+                        id="idBtnSub"
+                        text="Submit"
+                        press="onSubmit"
+                        type="Emphasized"
+                    />
+                </contentMiddle>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
