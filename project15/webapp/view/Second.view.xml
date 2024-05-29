@@ -1,0 +1,63 @@
+<mvc:View 
+    controllerName="restinpeace.project1.controller.Second"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    
+    <Page id="" title="I am Second View.">
+        <content>
+            <ObjectHeader title="{myModel>empname}" number="{myModel>empid}" numberUnit="{myModel>empdesig}">
+                <attributes>
+                    <ObjectAttribute title="Skill" text="{myModel>empskill}" />
+                    <ObjectAttribute title="Email" text="{myModel>empemail}" />
+                </attributes>
+                <statuses>
+                    <ObjectStatus text="{myModel>emploc}" />
+                </statuses>
+            </ObjectHeader>
+            <IconTabBar>
+                <items>
+                    <IconTabFilter text="Employee Information"> 
+                    <!-- Here we implemented Employee Information btn-kindOff thing. f-->
+                        <f:SimpleForm 
+                            editable="false" 
+                            layout="ResponsiveGridLayout" 
+                            labelSpanL="3" 
+                            columnsL="2" 
+                            columnsM="1">
+                            
+                            <f:content>
+                                <Label text="Employee Id" required="true" />
+                                <Text id="idIpEmpId" text="{myModel>empid}" />
+                                
+                                <Label text="Employee Name" required="true" />
+                                <Text id="idIpEmpName" text="{myModel>empname}" />
+                                
+                                <Label text="Employee Designation" required="true" />
+                                <Text id="idIpEmpDesignation" text="{myModel>empdesig}" />
+                                
+                                <Label text="Employee Skill" required="true" />
+                                <Text id="idIpEmpSkill" text="{myModel>empskill}" />
+                                
+                                <Label text="Employee Email" required="true" />
+                                <Text id="idIpEmpEmail" text="{myModel>empemail}" />
+                                
+                                <Label text="Employee Location" required="true" />
+                                <Text id="idIpEmpLocation" text="{myModel>emploc}" />
+                            </f:content>
+                        </f:SimpleForm>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+        <footer>
+            <Bar>
+                <contentMiddle>
+                    <Button text="Go to Third View" press="onGoThird" type="Emphasized" />
+                    <Button text="Back" press="onGoFirst" type="Emphasized" />
+                </contentMiddle>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
