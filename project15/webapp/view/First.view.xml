@@ -8,33 +8,24 @@
 >
     <Page id="page">
         <content>
-            <!-- <List
-                id="idListEmp"
-                items="{myModel>/aEmployees}"
-                mode="SingleSelectMaster"
-                selectionChange="onSelEmp"
+            <f:SimpleForm
+                title="Employee Information"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanL="3"
+                labelSpanM="3"
+                emptySpanL="4"
+                emptySpanM="4"
             >
-                <ObjectListItem
-                    title="{myModel>empname}"
-                    number="{myModel>empid}"
-                    numberUnit="{myModel>empdesig}"
-                >
-                    <attributes>
-                        <ObjectAttribute
-                            title="Skill"
-                            text="{myModel>empskill}"
-                        />
-                        <ObjectAttribute
-                            title="Email"
-                            text="{myModel>empemail}"
-                        />
-                    </attributes>
-                    <firstStatus>
-                        <ObjectStatus text="{myModel>emploc}" />
-                    </firstStatus>
-                </ObjectListItem>
-            </List> -->
-            <Table
+                <f:content>
+                    <Label
+                        text="Select Employee Id"
+                        required="true"
+                    />
+                    <Input id="idIpEmpId" />
+                </f:content>
+            </f:SimpleForm>
+            <!-- <Table
                 id="idListEmp"
                 items="{myModel>/aEmployees}"
                 mode="SingleSelectMaster"
@@ -42,11 +33,25 @@
             >
                 <headerToolbar>
                     <Toolbar>
-                        <Text text="Employees Details" class="sapMH4FontSize" />
+                        <Text
+                            text="Employees Details"
+                            class="sapMH4FontSize"
+                        />
                         <ToolbarSpacer />
-                        <SearchField width="30%" liveChange="onSearchEmp" />
-                        <Button icon="sap-icon://sort-ascending" tooltip="Sort Ascending" press="onSortAscending" />
-                        <Button icon="sap-icon://sort-descending" tooltip="Sort Descending" press="onSortDescending" />
+                        <SearchField
+                            width="30%"
+                            liveChange="onSearchEmp"
+                        />
+                        <Button
+                            icon="sap-icon://sort-ascending"
+                            tooltip="Sort Ascending"
+                            press="onSortAscending"
+                        />
+                        <Button
+                            icon="sap-icon://sort-descending"
+                            tooltip="Sort Descending"
+                            press="onSortDescending"
+                        />
                     </Toolbar>
                 </headerToolbar>
                 <columns>
@@ -67,7 +72,6 @@
                     </Column>
                 </columns>
                 <items>
-                    <!-- Used ColumnListItem to wrap the cells -->
                     <ColumnListItem>
                         <cells>
                             <Text text="{myModel>empid}" />
@@ -78,54 +82,7 @@
                         </cells>
                     </ColumnListItem>
                 </items>
-            </Table>
-            <!-- <f:SimpleForm
-                title="Employee Information"
-                layout="ResponsiveGridLayout"
-                labelSpanL="4"
-                labelSpanM="2"
-                emptySpanL="4"
-                emptySpanM="4"
-            >
-                <f:content>
-                    <Label text="Select the Relationship" />
-                    <Select items="{myModel>/aRelations}" change="onSelRelation">
-                        <core:ListItem text="{myModel>relation}" />
-                    </Select>
-                    <Label text="Select the Relationship in ComboBox"> </Label>
-                    <ComboBox items="{myModel>/aRelations}" selectionChange="onSelRelCB">
-                        <core:ListItem text="{myModel>relation}" />
-                    </ComboBox>
-                    <Label text="Select the language you know"> </Label>
-                    <MultiComboBox items="{myModel>/aLanguage}" selectionFinish="onSelLangs" >
-                        <core:ListItem text="{myModel>language}" />
-                    </MultiComboBox>
-                    <Label text="Select your gender"></Label>
-                    <RadioButtonGroup buttons="{myModel>/aGender}" columns="2" select="onSelectGender">
-                    <RadioButton text="{myModel>gender}">
-                    </RadioButton>
-                    </RadioButtonGroup>
-                    <Label text="Are you married?"></Label>
-                    <CheckBox select="onSelChb"></CheckBox>
-                    <Select
-                        id="deptId"
-                        required="true"
-                    >
-                        <core:Item
-                            key="1"
-                            text="Agri"
-                        />
-                        <core:Item
-                            key="2"
-                            text="Trade"
-                        />
-                        <core:Item
-                            key="3"
-                            text="Marketing"
-                        />
-                    </Select>
-                </f:content>
-            </f:SimpleForm> -->
+            </Table> -->
         </content>
         <footer>
             <Bar>
