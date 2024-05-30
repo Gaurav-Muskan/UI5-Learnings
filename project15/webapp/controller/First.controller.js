@@ -53,34 +53,33 @@ sap.ui.define(
         this.getView().byId("idListEmp").getBinding("items").sort(oSorter);
       },
       onF4HelpPress: function(oEvent) {
-        // Check if the QuickView or dialog is already created
-        var oIcon = oEvent.getSource(),
-            oView = this.getView();
+        var oView = this.getView();
 
-        // Check if the QuickView is not created
-        if (!this._pQuickView) {
+        // Check if the dialog is not created
+        if (!this._pDialog) {
             // Load the fragment asynchronously
-            this._pQuickView = Fragment.load({
+            this._pDialog = Fragment.load({
                 id: oView.getId(),
                 name: "restinpeace.project1.fragment.EmpF4Help",
                 controller: this
-            }).then(function(oQuickView) {
-                // Add QuickView to the view
-                oView.addDependent(oQuickView);
-                 oQuickView.open();
+            }).then(function(oDialog) {
+                // Add Dialog to the view
+                oView.addDependent(oDialog);
+                return oDialog;
             });
         }
 
-        // Open the QuickView once it's loaded
-        // this._pQuickView.then(function(oQuickView) {
-        //     oQuickView.openBy(oIcon);
-        // });
+        // Open the dialog once it's loaded
+        this._pDialog.then(function(oDialog) {
+            oDialog.open();
+        });
     },
 
-    // Add any additional methods required for fragment
     onCloseDialog: function() {
-        if (this._dialog) {
-            this._dialog.close();
+        if (this._pDialog) {
+            this._pDialog.then(function(oDialog) {
+                oDialog.close();
+            });
         }
     }
     });
