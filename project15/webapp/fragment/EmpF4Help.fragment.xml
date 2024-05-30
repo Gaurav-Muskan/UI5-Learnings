@@ -1,0 +1,65 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+<Dialog title="Select an Employee">
+<Table
+                id="idListEmp"
+                items="{myModel>/aEmployees}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
+            >
+                <headerToolbar>
+                    <Toolbar>
+                        <Text
+                            text="Employees Details"
+                            class="sapMH4FontSize"
+                        />
+                        <ToolbarSpacer />
+                        <SearchField
+                            width="30%"
+                            liveChange="onSearchEmp"
+                        />
+                        <Button
+                            icon="sap-icon://sort-ascending"
+                            tooltip="Sort Ascending"
+                            press="onSortAscending"
+                        />
+                        <Button
+                            icon="sap-icon://sort-descending"
+                            tooltip="Sort Descending"
+                            press="onSortDescending"
+                        />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Employee ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Designation" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Skill" />
+                    </Column>
+                    <Column>
+                        <Text text="Employee Location" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{myModel>empid}" />
+                            <Text text="{myModel>empname}" />
+                            <Text text="{myModel>empdesig}" />
+                            <Text text="{myModel>empskill}" />
+                            <Text text="{myModel>emploc}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+</Dialog>
+</core:FragmentDefinition>
