@@ -81,6 +81,11 @@ sap.ui.define(
                 oDialog.close();
             });
         }
+    },
+    onSelEmpFromF4: function(oEvent){
+      var empId=oEvent.getParameter("listItem").getBindingContext("myModel").getProperty("empid");
+      this.getView().byId("idIpEmpId").setValue(empId);
+      this.onCloseDialog();
     }
     });
   }

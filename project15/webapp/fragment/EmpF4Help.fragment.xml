@@ -7,7 +7,7 @@
                 id="idListEmp"
                 items="{myModel>/aEmployees}"
                 mode="SingleSelectMaster"
-                selectionChange="onSelEmp"
+                selectionChange="onSelEmpFromF4"
             >
                 <headerToolbar>
                     <Toolbar>
@@ -61,6 +61,8 @@
                     </ColumnListItem>
                 </items>
             </Table>
+             <endButton>
             <Button text="Close" press="onCloseDialog" />
+        </endButton>
 </Dialog>
 </core:FragmentDefinition>
