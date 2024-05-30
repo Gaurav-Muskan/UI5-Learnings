@@ -61,5 +61,6 @@
                     </ColumnListItem>
                 </items>
             </Table>
+            <Button text="Close" press="onCloseDialog" />
 </Dialog>
 </core:FragmentDefinition>
